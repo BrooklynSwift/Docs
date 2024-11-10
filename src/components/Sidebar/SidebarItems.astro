@@ -1,0 +1,42 @@
+---
+const items = await Astro.glob('../../content/docs/*.md')
+const currentPath = Astro.url.pathname
+
+items.sort((a, b) => {
+	const first = a.frontmatter.order || 0
+	const second = b.frontmatter.order || 0
+
+	return first - second
+})
+---
+
+{items.map((item, index) => {
+	const { frontmatter } = item
+	const slug = item.file.split('/').pop().replace('.md', '')
+	const url = `/docs/${slug}`
+	const isActive = currentPath === url || (index === 0 && currentPath === '/docs/getting-started')
+	return (<a class={isActive ? "active-link" : ""} href={url}>{frontmatter.title}</a>)
+})}
+
+<style>
+	a {
+		color: var(--text-color);
+		font-size: 1.2rem;
+		font-weight: 500;
+		padding: 10px;
+		text-decoration: none;
+		width: 95%;
+		white-space: nowrap;
+	}
+
+	a.active-link {
+		border-radius: 8px;
+		background-color: var(--header-color);
+	}
+
+	@media (width < 40em) {
+		a.active-link {
+			background-color: transparent;
+		}
+	}
+</style>

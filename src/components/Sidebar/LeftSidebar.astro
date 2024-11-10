@@ -1,0 +1,25 @@
+---
+import SidebarItems from "./SidebarItems.astro";
+---
+
+<div class="sidebar">
+	<SidebarItems />
+</div>
+
+<style>
+	.sidebar {
+		border-right: 2px solid var(--lighter);
+		display: none;
+		flex-direction: column;
+		margin-top: 15px;
+		min-height: 100dvh;
+		padding: 20px;
+		width: 15%;
+	}
+
+	@media screen and (min-width: 62.5em) {
+		.sidebar {
+			display: flex;
+		}
+	}
+</style>

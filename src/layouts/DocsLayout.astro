@@ -1,0 +1,63 @@
+---
+import BaseLayout from "./BaseLayout.astro"
+import Header from "../components/Header.astro"
+import LeftSidebar from "../components/Sidebar/LeftSidebar.astro"
+---
+
+<BaseLayout>
+	<Header />
+	<div class="docs-container">
+		<LeftSidebar />
+		<article class="article">
+			<slot />
+		</article>
+	</div>
+</BaseLayout>
+
+<style is:inline>
+	.docs-container {
+		display: flex;
+		flex-direction: row;
+		margin-top: 40px;
+		padding: 0.5rem 2rem;
+		width: 100%;
+	}
+
+	.article {
+		padding: 0rem 2rem;
+		max-width: 85%;
+	}
+
+	.article h1 {
+		font-size: 3rem;
+	}
+
+	.article h2 {
+		font-size: 2.5rem;
+	}
+
+	.article h3 {
+		font-size: 1.5rem;
+		line-height: 0.5;
+		margin-bottom: 1.5rem;
+	}
+
+	.article h1, h2, h3 {
+		font-weight: 500;
+		margin-bottom: 1rem;
+	}
+
+	.article > * {
+		max-width: 85%;
+	}
+
+	@media screen and (width < 40em) {
+		.article {
+			padding: 0;
+		}
+
+		.article > * {
+			max-width: 450px;
+		}
+	}
+</style>
