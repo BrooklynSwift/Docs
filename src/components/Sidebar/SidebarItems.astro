@@ -25,18 +25,18 @@ items.sort((a, b) => {
 		font-weight: 500;
 		padding: 10px;
 		text-decoration: none;
-		width: 95%;
 		white-space: nowrap;
+		width: 95%;
 	}
 
 	a.active-link {
 		border-radius: 8px;
-		background-color: var(--header-color);
+		background-color: transparent;
 	}
 
-	@media (width < 40em) {
+	@media screen and (min-width: 48em) {
 		a.active-link {
-			background-color: transparent;
+			background-color: var(--header-color);
 		}
 	}
 </style>
