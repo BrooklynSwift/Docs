@@ -4,17 +4,17 @@
 	--brooklyn-tint-color: #BCC6F9;
 	--background-color: white;
 	--foreground-color: #121212;
-	--header-color: #f8f8f8;
+	--header-color: #F8F8F8;
+	--near-background: #EEEEEE;
 	--text-color: #272727;
-	--lighter: #EEEEEE;
 }
 
 html.dark {
 	--background-color: #121212;
 	--foreground-color: white;
-	--header-color: #1a1a1a;
-	--text-color: #eeeeee;
-	--lighter: #242424;
+	--header-color: #1A1A1A;
+	--near-background: #242424;
+	--text-color: #EEEEEE;
 }
 
 html, body {
@@ -26,7 +26,7 @@ html, body {
 body {
 	background-color: var(--background-color);
 	color: var(--text-color);
-	transition: background-color 0.3s ease, color 0.3s ease;
+	transition: background-color 0.3s, color 0.3s;
 }
 
 h1 {
