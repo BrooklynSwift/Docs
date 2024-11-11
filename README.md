@@ -1,5 +1,7 @@
 # Brooklyn Docs
 
+* Documentation website for [Brooklyn](https://github.com/BrooklynSwift/Brooklyn/), a static site generator made in pure Swift. Work in progress
+
 ## Socials
 
 * [Twitter](https://twitter.com/Lukii120)
