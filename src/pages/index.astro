@@ -14,33 +14,33 @@ const brooklynCode = `VStack {
 
 <BaseLayout>
 	<div class="container">
-		<Header />
 		<main class="main-content">
 			<div class="get-started-container">
 				<h1>Create websites in Swift</h1>
 				<h3>Welcome to the Brooklyn documentation, a Swift static site generator</h3>
-				<button class="get-started-button" onclick="window.location.href = '/docs/getting-started'">
+				<button aria-label="Get started button" class="get-started-button" onclick="window.location.href = '/docs/getting-started'">
 					Get started
 				</button>
 			</div>
-			<div style="padding-top: 20px; text-align: left;">
+			<div style="padding-top: 1.25rem; text-align: left;">
 				<Code code={brooklynCode} lang={"swift"} theme={"nord"}></Code>
 			</div>
 		</main>
 		<footer class="footer">
 			<span>
-				This website is <a class="open-source-text" href="https://github.com/Luki120/BrooklynDocs/">open source</a>
+				This website is <a class="open-source-text" href="https://github.com/BrooklynSwift/Docs/">open source</a>
 			</span>
 			<span class="copyright-label" style="font-size: 0.8rem;"></span>
 		</footer>
 	</div>
+	<Header />
 </BaseLayout>
 
 <style>
 	.container {
 		display: flex;
 		flex-direction: column;
-		margin-top: 50px;
+		margin-top: 3.8rem;
 		min-height: -webkit-fill-available;
 	}
 
@@ -56,20 +56,20 @@ const brooklynCode = `VStack {
 		align-items: center;
 		display: flex;
 		flex-direction: column;
-		padding-top: 30px;
+		padding-top: 2.5rem;
 	}
 
 	.get-started-container h1 {
 		font-size: 1.5rem;
 		font-weight: 600;
 		line-height: 0;
-		padding: 0 15px;
+		padding: 0 1rem;
 	}
 
 	.get-started-container h3 {
 		font-size: 1rem;
 		font-weight: 400;
-		padding: 0 15px;
+		padding: 0 1rem;
 	}
 
 	@media screen and (min-width: 62.5em) {
@@ -83,13 +83,11 @@ const brooklynCode = `VStack {
 
 	.get-started-button {
 		background-color: var(--brooklyn-tint-color);
-		border: none;
 		border-radius: 4px;
 		color: #242424;
 		font-size: 1rem;
-		height: 40px;
-		width: 120px;
-		margin-top: 15px;
+		padding: 1rem 1.4rem;
+		margin-top: 1rem;
 	}
 
 	.footer {
@@ -101,7 +99,7 @@ const brooklynCode = `VStack {
 		justify-content: center;
 		position: fixed;
 		bottom: 0;
-		height: 100px;
+		padding: 2rem 0;
 		width: 100%;
 	}
 

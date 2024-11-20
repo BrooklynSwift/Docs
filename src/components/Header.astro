@@ -8,7 +8,7 @@ import ThemeButton from "./ThemeButton.astro"
 	<nav class="nav-bar">
 		<div class="left-container">
 			<Logo />
-			<button onclick="window.location.href='/'" style="background-color: transparent; border: none;">
+			<button aria-label="Home button" onclick="window.location.href='/'">
 				<h1>Brooklyn Docs</h1>
 			</button>
 		</div>
@@ -25,10 +25,9 @@ import ThemeButton from "./ThemeButton.astro"
 		color: var(--text-color);
 		display: flex;
 		font-weight: bolder;
-		height: 60px;
 		position: fixed;
 		top: 0;
-		width: 100dvw;
+		width: 100%;
 	}
 
 	.header h1 {
@@ -40,6 +39,7 @@ import ThemeButton from "./ThemeButton.astro"
 			font-size: 2rem;
 			line-height: 0;
 		}
+
 		.left-container {
 			gap: 20px;
 		}
@@ -49,8 +49,8 @@ import ThemeButton from "./ThemeButton.astro"
 		box-shadow: 0 4px 12px var(--near-background);
 		display: flex;
 		justify-content: space-between;
+		padding: 0.5rem 1.25rem;
 		width: 100%;
-		padding: 0 20px;
 	}
 
 	.left-container {
