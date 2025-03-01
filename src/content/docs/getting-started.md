@@ -11,8 +11,10 @@ Brooklyn is a static site generator made in pure Swift. You write fast, type saf
 
 ## Instalation
 
-### Clone the project
+* The easiest way to start is cloning the project & running the CLI provided by Brooklyn.
+
+<!-- ### Clone the project -->
 
 ```
-git clone https://github.com/Brooklyn/Brooklyn/
+git clone https://github.com/BrooklynSwift/Brooklyn/
 ```
